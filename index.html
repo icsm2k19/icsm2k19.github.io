@@ -53,7 +53,7 @@
   </div>
 </nav>                                          
     <!--FLOAT-->
-<div class="parent2">
+<div class="parent2 scrltp">
       <a href="#contact" data-toggle="tooltip" title="Contact"><div class="test1"><img src="assets/images/icon/navbar/phone-book.png"></div></a>
      <a href="#committee" data-toggle="tooltip" title="Committee"><div class="test2"><img src="assets/images/icon/navbar/team.png"></div></a>
       <a href="#registration" data-toggle="tooltip" title="Registration"><div class="test3"><img src="assets/images/icon/navbar/registration.png"></div></a>
@@ -1055,6 +1055,29 @@ Research Professor Dongguk University.l</span></td>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
+           
+                       
+            (function(){
+   var link,
+      toggleScrollToTopLink = function(){
+
+        if($("body").scrollTop() > 700 || $("html").scrollTop() > 700){
+          link.fadeIn(700);
+        }
+        else{
+          link.fadeOut(700);
+        }
+      };
+
+      $(document).ready(function(){
+
+        link = $(".scrltp");
+        $(window).scroll(toggleScrollToTopLink);
+        toggleScrollToTopLink();
+      });
+
+})();
+
 </script>
 
         

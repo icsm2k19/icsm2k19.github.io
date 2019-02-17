@@ -944,6 +944,11 @@ Research Professor Dongguk University.l</span></td>
    
 
 <!--COMMITTEE-->
+<!--SCROLLTOP-->
+
+           <a href="#home"><img class="img-responsive scrlt" src="assets/images/up.png" height="20px;" width="50px;" style="position: fixed; right: 10px; bottom: 20px;"></a>
+    
+   <!--SCROLLTOP-->
 
 
 <br />
@@ -1109,6 +1114,31 @@ $(document).ready(function(){
            function myFun() {
                 alert("Registration is Disable Now....Please submit your Paper's first..");
                 }
+		
+		      
+            
+            (function(){
+   var link,
+      toggleScrollToTopLink = function(){
+
+        if($("body").scrollTop() > 0 || $("html").scrollTop() > 0){
+          link.fadeIn(300);
+        }
+        else{
+          link.fadeOut(300);
+        }
+      };
+
+      $(document).ready(function(){
+
+        link = $(".scrlt");
+        $(window).scroll(toggleScrollToTopLink);
+        toggleScrollToTopLink();
+      });
+
+})();
+      
+		
 </script>
 
         
